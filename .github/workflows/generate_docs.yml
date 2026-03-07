@@ -30,7 +30,17 @@ jobs:
       - name: 3. Generate Doxygen documentation 🚀
         run: doxygen docs/Doxyfile
 
-      - name: 4. Upload Artifact 📦
+      - name: 4. Install lcov ⚙️
+        run: sudo apt-get update && sudo apt-get install -y lcov
+
+      - name: 5. Generate Coverage Report 📊
+        run: make coverage
+
+      - name: 6. Silently Add Coverage to Pages 🤫
+        run: |
+          mv coverage/html docs/html/coverage
+
+      - name: 7. Upload Artifact 📦
         uses: actions/upload-pages-artifact@v3
         with:
           path: './docs/html'

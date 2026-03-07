@@ -10,8 +10,14 @@ This template contains:
 - Doxygen setup (within makefile)
 - Template .h and .test.c files
 - Linux Kernel autoformat config
+- gcov/lcov detailed coverage report
 
-Current template version: v0.0.0
+Current template version: v0.1.0
+
+Github will automatically run tests, checks,
+create coverage report and doxygen github pages.
+Coverage report is accessible under main doxygen url:
+https://<your-username>.github.io/<your-repo>/coverage/
 
 ```
 Copyright (c) 2026 furdog <https://github.com/furdog>
