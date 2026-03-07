@@ -17,7 +17,8 @@ Current template version: v0.1.0
 Github will automatically run tests, checks,
 create coverage report and doxygen github pages.
 Coverage report is accessible under main doxygen url:
-https://<your-username>.github.io/<your-repo>/coverage/
+`https://<your-username>.github.io/<your-repo>/coverage/`
+for example: https://furdog.github.io/hap_c89_template/coverage/
 
 ```
 Copyright (c) 2026 furdog <https://github.com/furdog>
