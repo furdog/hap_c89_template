@@ -1,4 +1,7 @@
-.PHONY: all docs misra test clean
+# makefile version: v0.1.1
+
+# Always rebuild
+.PHONY: all misra test coverage docs clean
 
 # Variables
 MISRA_REPO := https://github.com/furdog/MISRA.git
@@ -10,7 +13,7 @@ TEST_OUTPUT := test_out
 DOXYFILE := docs/Doxyfile
 
 # Default target
-all: format misra test docs
+all: format misra test coverage docs
 
 format:
 	clang-format -style=file:linux_kernel.clang-format -i $(addprefix *,.h .c) || true
@@ -86,6 +89,3 @@ clean:
 	@rm -f $(TEST_OUTPUT)
 	@rm -rf docs/html docs/latex # Add other Doxygen output directories as needed
 	@rm -rf coverage
-
-# Always evaluate coverage
-.PHONY: coverage
