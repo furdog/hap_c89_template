@@ -6,29 +6,11 @@
  * The design is hardware-agnostic, requiring an external adaptation layer
  * for hardware interaction.
  *
- * **Conventions:**
- * C89, Linux kernel style, MISRA, rule of 10, No hardware specific code,
- * only generic C and some binding layer. Be extra specific about types.
- *
- * Naming Convention Standard:
- * Use scientific units with short qualifier prefixes where possible:
- * Pattern: [property_description]_[qualifier][scale][unit]_[offset]_[type]
- * Examples:
- * - timer_r10ms_u8        (Resolution: 10ms/bit, Type: uint8_t)
- * - power_r150w           (Resolution: 150W/bit or 0.15kwt/bit)
- * - soc_r0p1pct_u16       (Resolution: 0.1%/bit, Type: uint16_t)
- * - carbon_q5mol_u32      (Quantity:   5mol/unit, Type: uint32_t)
- * - speed_r0p5kmh_offn500 (Resolution: 0.5km/h, Offset: -500)
- * - prescaler_r1div7      (Resolution: 1/7 or 0,142857...)
- *
  * ```LICENSE
- * Copyright (c) 2025 furdog <https://github.com/furdog>
+ * Copyright (c) 2026 furdog <https://github.com/furdog>
  *
  * SPDX-License-Identifier: 0BSD
  * ```
- *
- * Be free, be wise and take care of yourself!
- * With best wishes and respect, furdog
  */
 
 #ifndef TEMPLATE_HEADER_GUARD
