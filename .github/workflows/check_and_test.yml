@@ -20,10 +20,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install Cppcheck
+      - name: Install static analysis tools
         run: |
           apt-get update
-          apt-get install -y cppcheck
+          apt-get install -y cppcheck clang-tidy
 
       - name: Run clang-tidy check
         run: |
