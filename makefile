@@ -19,7 +19,7 @@ format:
 	clang-format -style=file:linux_kernel.clang-format -i $(addprefix *,.h .c) || true
 
 lint:
-	clang-tidy $(HEADER_FILES) -- -std=c89
+	clang-tidy $(HEADER_FILES) -- -x c -std=c89
 
 fix:
 	clang-tidy -fix $(HEADER_FILES) -- -std=c89 || true
