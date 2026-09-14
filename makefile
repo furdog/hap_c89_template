@@ -18,6 +18,12 @@ all: format misra test coverage docs
 format:
 	clang-format -style=file:linux_kernel.clang-format -i $(addprefix *,.h .c) || true
 
+lint:
+	clang-tidy $(HEADER_FILES) -- -std=c89
+
+fix:
+	clang-tidy -fix $(HEADER_FILES) -- -std=c89
+
 # Target for running MISRA checks and setup
 misra: $(MISRA_SCRIPT)
 	@echo "--- Setting up and running MISRA checks ---"
@@ -67,7 +73,7 @@ coverage:
 	# Compile the test source file(s)
 	gcc $(SOURCE_FILES) -std=c89 -pedantic -Wall -Wextra -g \
 	  -fsanitize=undefined -fsanitize-undefined-trap-on-error -fanalyzer \
-	  -DNDEBUG --coverage -o coverage/$(TEST_OUTPUT)
+	  --coverage -o coverage/$(TEST_OUTPUT)
 
 	# Run the compiled test executable
 	cd coverage && ./$(TEST_OUTPUT)
