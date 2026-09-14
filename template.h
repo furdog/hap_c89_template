@@ -19,7 +19,6 @@
 #include <assert.h>
 #include <stdbool.h>
 #include <stdint.h>
-#include <string.h>
 
 /** Template main instance */
 struct template_instance {
@@ -31,7 +30,7 @@ static void template_instance_init(struct template_instance *self)
 {
 	assert(self);
 
-	self->test = 0u;
+	self->test = 0U;
 }
 
 /** Template 'test' setter */

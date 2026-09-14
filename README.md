@@ -28,7 +28,7 @@ for example: `https://furdog.github.io/hap_c89_template/coverage/`
 > This section is a part of https://furdog.github.io/hap_c89_template/
 
 - Linux kernel style, `snake_case`
-- Before commit run: `make misra test coverage docs` (or just `make`)
+- Before commit run: `make format lint fix misra test coverage docs` (or just `make`)
 - Follow [The Power of 10: Rules for Developing Safety-Critical Code](https://spinroot.com/gerard/pdf/P10.pdf). Local edit available under [P10.md](./docs/P10.md)
 - Doxygen style docs
 - Enable github pages (set Actions as source)
