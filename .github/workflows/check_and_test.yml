@@ -12,7 +12,7 @@ on:
 jobs:
   analysis:
     runs-on: ubuntu-latest
-    
+
     container:
       image: gcc:latest
 

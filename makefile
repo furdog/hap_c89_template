@@ -16,13 +16,13 @@ DOXYFILE := docs/Doxyfile
 all: format fix lint misra test coverage docs
 
 format:
-	clang-format -style=file:linux_kernel.clang-format -i $(addprefix *,.h .c) || true
+	clang-format -style=file:linux_kernel.clang-format -i $(HEADER_FILES) $(SOURCE_FILES) || true
 
 lint:
-	clang-tidy $(HEADER_FILES) -- -x c -std=c89
+	clang-tidy $(HEADER_FILES)
 
 fix:
-	clang-tidy -fix $(HEADER_FILES) -- -std=c89 || true
+	clang-tidy -fix $(HEADER_FILES) || true
 
 # Target for running MISRA checks and setup
 misra: $(MISRA_SCRIPT)

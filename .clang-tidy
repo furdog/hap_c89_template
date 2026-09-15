@@ -18,5 +18,4 @@ Checks: >
 WarningsAsErrors: '*'
 
 ExtraArgs:
-  - '-std=c89'
   - '-Wcomment'
