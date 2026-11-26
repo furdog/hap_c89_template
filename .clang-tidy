@@ -11,8 +11,8 @@ Checks: >
   clang-analyzer-*,
   modernize-*,
   bugprone-*,
-  -bugprone-reserved-identifier,
-  -readability-avoid-const-params-in-decls
+  cert-*,
+  -readability-trailing-comma
 
 # Treat all warnings as errors in CI
 WarningsAsErrors: '*'
